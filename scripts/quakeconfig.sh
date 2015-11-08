@@ -86,6 +86,6 @@ echo "Downloading and replacing /etc/init/supervisor.conf' ..."
 sudo rm /etc/init/supervisor.conf
 curl -s $QLDS_CONFIG_URL/config-files/supervisor-upstart.conf > supervisor-upstart.conf
 sudo mv supervisor-upstart.conf /etc/init/supervisor.conf
-sudo dos2unix --quite /etc/init/supervisor.conf
+sudo dos2unix --quiet /etc/init/supervisor.conf
 echo "Done."
 exit 0

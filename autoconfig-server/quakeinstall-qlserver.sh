@@ -27,7 +27,7 @@ cd ~
 curl -s $QLDS_CONFIG_URL/scripts/quakeupdate.sh > quakeupdate.sh
 clear
 echo "Creating $HOME/.quakelive directory and copying exports"
-mkdir -p $HOME/.quakelive/config/baseq3
+mkdir -p $HOME/.quakelive/config
 mkdir -p $HOME/.quakelive/log
 cd ~/.quakelive
 curl -s $QLDS_CONFIG_URL/scripts/quakeexports.sh > quakeexports.sh

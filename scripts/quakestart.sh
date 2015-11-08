@@ -8,7 +8,7 @@
 
 gameport=`expr $1 + 27960`
 rconport=`expr $1 + 28960`
-servernum=`expr $1 + 0`
+servernum=`expr $1 + 1`
 
 # Starts servers with different settings, based off the process number parsed
 # as argument 1 by supervisord.
@@ -23,7 +23,7 @@ echo "Starting VQL duel servers..."
 exec $QLDS_X86 \
   +set net_strict 1 \
   +set net_port $gameport \
-  +set sv_hostname "#$servernum EPOCH VQL - Duel" \
+  +set sv_hostname "EPOCH VQL Duel #$servernum" \
   +set zmq_rcon_enable 1 \
   +set zmq_rcon_password "$QLDS_RCON_PW" \
   +set zmq_rcon_port $rconport \

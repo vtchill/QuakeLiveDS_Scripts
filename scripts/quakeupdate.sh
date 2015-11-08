@@ -26,7 +26,7 @@ done
 # Using 'supervisorctl' to stop all servers.
 echo "Stopping Quake Servers..."
 sudo service supervisor stop
-/usr/local/bin/supervisorctl stop all
+#/usr/local/bin/supervisorctl stop all
 
 # Running 'steamcmd' to update qzeroded
 echo "Updating Quake Server..."
@@ -48,7 +48,7 @@ bash $HOME/autodownload.sh
 # Using 'supervisorctl' to start all servers.
 echo "Starting Quake Servers..."
 sudo service supervisor start
-/usr/local/bin/supervisorctl start all
+#/usr/local/bin/supervisorctl start all
 
 # Pretty obvious what's happening now.
 echo "Done."

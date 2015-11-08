@@ -31,15 +31,15 @@ echo "Stopping Quake Servers..."
 echo "Updating Quake Server..."
 ~/steamcmd/steamcmd.sh +login anonymous +force_install_dir ~/steamcmd/steamapps/common/qlds/ +app_update 349090 +quit
 
-# Updating mappools/configs/factories
-curl $QLDS_CONFIG_URL/scripts/quakeconfig.sh > quakeconfig.sh
-dos2unix quakeconfig.sh
-chmod +x quakeconfig.sh
-sh quakeconfig.sh
-
 # Removing the .quakelive directories, except for baseq3.
 echo "Remove .quakelive directories"
 rm -rf $QLDS_CONFIG_DIR/*
+
+# Updating mappools/configs/factories
+curl -s $QLDS_CONFIG_URL/scripts/quakeconfig.sh > quakeconfig.sh
+dos2unix quakeconfig.sh
+chmod +x quakeconfig.sh
+sh quakeconfig.sh
 
 # Running 'autodownload.sh' to recache all workshop items before restarting.
 bash $HOME/autodownload.sh

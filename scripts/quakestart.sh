@@ -4,7 +4,9 @@
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "$HOME/.quakelive/quakeexports.sh"
+# cannot use $HOME here because this is invoked by upstart
+# and the $HOME env is not set correctly at that time
+. "/home/steam/.quakelive/quakeexports.sh"
 
 gameport=`expr $1 + 27960`
 rconport=`expr $1 + 28960`

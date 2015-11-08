@@ -146,4 +146,7 @@ command=/home/steam/quakestart.sh %(process_num)s
 user=steam
 process_name=qzeroded_%(process_num)s
 numprocs=5
+autostart=true
 autorestart=true
+stderr_logfile=/home/.quakelive/log/qlds_%(process_num)s.err.log
+stdout_logfile=/home/.quakelive/log/qlds_%(process_num)s.out.log

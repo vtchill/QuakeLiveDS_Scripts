@@ -34,7 +34,7 @@ curl -s $QLDS_CONFIG_URL/scripts/quakemotd.sh > quakemotd.sh
 dos2unix --quiet quakemotd.sh
 chmod +x quakemotd.sh
 
-cd $QLDS_CONFIG_DIR
+cd $QLDS_CONFIG_DIR/files
 echo "Downloading and replacing server.cfg..."
 rm server.cfg
 curl -s $QLDS_CONFIG_URL/config-files/server.txt > server.cfg

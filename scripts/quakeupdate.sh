@@ -11,6 +11,9 @@ export qUpdateServerMessage="Server will be going down ^1within a minute^7 for d
 export qUpdateLowestRconPort=28960
 export qUpdateHighestRconPort=28970
 
+serverPortStart=27960
+serverPortEnd=27970
+
 echo "========== QuakeUpdate.sh has started. =========="
 echo "========= $(date) ========="
 # Informing players in the servers that the servers are going down for a bit.
@@ -32,15 +35,22 @@ sudo service supervisord stop
 echo "Updating Quake Server..."
 ~/steamcmd/steamcmd.sh +login anonymous +force_install_dir ~/steamcmd/steamapps/common/qlds/ +app_update 349090 +quit
 
-# Removing the .quakelive directories, except for baseq3.
-echo "Remove .quakelive directories"
-rm -rf $QLDS_CONFIG_DIR/*
-
 # Updating mappools/configs/factories
 curl -s $QLDS_CONFIG_URL/scripts/quakeconfig.sh > quakeconfig.sh
 dos2unix quakeconfig.sh
 chmod +x quakeconfig.sh
 sh quakeconfig.sh
+
+echo "Updating $HOME/steam/.quakelive configuration files"
+counter=serverPortStart
+while [ $counter -le serverPortEnd ]
+do
+  echo "Updating configuration files in $QLDS_CONFIG_DIR/$counter"
+  rm -rf $QLDS_CONFIG_DIR/$counter
+  mkdir -p $QLDS_CONFIG_DIR/$counter
+  cp $QLDS_CONFIG_DIR/files/* $QLDS_CONFIG_DIR/$counter
+  ((counter++))
+done
 
 # Running 'autodownload.sh' to recache all workshop items before restarting.
 bash $HOME/autodownload.sh

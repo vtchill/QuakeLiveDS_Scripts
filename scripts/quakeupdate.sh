@@ -43,7 +43,7 @@ sh quakeconfig.sh
 
 echo "Updating $HOME/steam/.quakelive configuration files"
 counter=serverPortStart
-while [ $counter -le serverPortEnd ]
+while [ $counter -le $serverPortEnd ]
 do
   echo "Updating configuration files in $QLDS_CONFIG_DIR/$counter"
   rm -rf $QLDS_CONFIG_DIR/$counter

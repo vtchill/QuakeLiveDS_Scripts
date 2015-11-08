@@ -4,7 +4,7 @@
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "~/.quakelive/exports.sh"
+. "~/.quakelive/quakeexports.sh"
 
 #
 #  DEPRECIATED IN FAVOUR OF MINQLX

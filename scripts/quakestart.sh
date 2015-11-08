@@ -4,7 +4,7 @@
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "~/.quakelive/exports.sh"
+. "~/.quakelive/quakeexports.sh"
 
 gameport=`expr $1 + 27960`
 rconport=`expr $1 + 28960`
@@ -31,7 +31,7 @@ exec $QLDS_X86 \
   +set zmq_stats_password "" \
   +set zmq_stats_port $gameport \
   +set sv_tags "$QLDS_LOCATION_TAGS" \
-  +set g_voteFlags "543" \
+  +set g_voteFlags "13320" \
   +set g_allowSpecVote 0 \
   +set g_allowVoteMidGame 0 \
   +set bot_enable 1 \

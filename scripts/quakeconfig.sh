@@ -1,10 +1,10 @@
-#! /bin/bash
+#!/bin/bash
 # quakeconfig.txt - quake live server file sync.
 # created by Thomas Jones on 09/10/15.
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "~/.quakelive/exports.sh"
+. "~/.quakelive/quakeexports.sh"
 
 echo "========== QuakeConfig.sh has started. =========="
 echo "========= $(date) ========="

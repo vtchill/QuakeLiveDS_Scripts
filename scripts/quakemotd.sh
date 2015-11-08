@@ -3,6 +3,8 @@
 # created by Thomas Jones on 10/10/15.
 # purger@tomtecsolutions.com
 
+# source the exports file
+. "~/.quakelive/exports.sh"
 
 #
 #  DEPRECIATED IN FAVOUR OF MINQLX

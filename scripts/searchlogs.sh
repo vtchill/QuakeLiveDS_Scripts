@@ -3,6 +3,9 @@
 # created by Thomas Jones on 02/10/15.
 # purger@tomtecsolutions.com
 
+# source the exports file
+. "~/.quakelive/exports.sh"
+
 if [ $# -eq 0 ]; then
     echo "Usage:"
     echo "    ./searchlogs.sh <string> <server id> <surrounding lines>"

@@ -24,7 +24,7 @@ echo "Installing Quake Live Dedicated Server..."
 clear
 echo "Downloading qlds server scripts to ~/$QLDS_USER/"
 cd ~
-wget $QLDS_CONFIG_URL/quakeconfig.sh
+wget $QLDS_CONFIG_URL/scripts/quakeupdate.sh
 clear
 echo "Creating ~/$QLDS_USER/.quakelive directory and copying exports"
 mkdir -p ~/.quakelive/config

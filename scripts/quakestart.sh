@@ -4,7 +4,7 @@
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "~/.quakelive/quakeexports.sh"
+. "$HOME/.quakelive/quakeexports.sh"
 
 gameport=`expr $1 + 27960`
 rconport=`expr $1 + 28960`

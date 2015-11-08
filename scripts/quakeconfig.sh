@@ -4,7 +4,7 @@
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "~/.quakelive/quakeexports.sh"
+. "$HOME/.quakelive/quakeexports.sh"
 
 echo "========== QuakeConfig.sh has started. =========="
 echo "========= $(date) ========="

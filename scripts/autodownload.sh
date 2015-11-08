@@ -4,7 +4,7 @@
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "~/.quakelive/quakeexports.sh"
+. "$HOME/.quakelive/quakeexports.sh"
 
 echo "========== AutoDownload.sh has started. =========="
 echo "========= $(date) ========="

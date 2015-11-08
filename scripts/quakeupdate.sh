@@ -4,7 +4,7 @@
 # purger@tomtecsolutions.com
 
 # source the exports file
-. "~/.quakelive/quakeexports.sh"
+. "$HOME/.quakelive/quakeexports.sh"
 
 # Defining variables:
 export qUpdateServerMessage="Server will be going down ^1within a minute^7 for daily updating. The server will be back in ^410 minutes^7."
@@ -39,12 +39,10 @@ sh quakeconfig.sh
 
 # Removing the .quakelive directories, except for baseq3.
 echo "Remove .quakelive directories"
-cd ~/.quakelive
-rm -rf config
-cd ~
+rm -rf $QLDS_CONFIG_DIR/*
 
 # Running 'autodownload.sh' to recache all workshop items before restarting.
-bash ~/autodownload.sh
+bash $HOME/autodownload.sh
 
 # Using 'supervisorctl' to start all servers.
 echo "Starting Quake Servers..."

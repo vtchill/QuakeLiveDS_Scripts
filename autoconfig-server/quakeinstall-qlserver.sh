@@ -22,15 +22,22 @@ clear
 echo "Installing Quake Live Dedicated Server..."
 ./steamcmd.sh +login anonymous +force_install_dir /home/$QLDS_USER/steamcmd/steamapps/common/qlds/ +app_update 349090 +quit
 clear
+echo "Downloading qlds server scripts to ~/$QLDS_USER/"
+cd ~
+wget $QLDS_CONFIG_URL/quakeconfig.sh
+clear
+echo "Creating ~/$QLDS_USER/.quakelive directory and copying exports"
+mkdir -p ~/.quakelive/config
+cd ~/.quakelive
+wget $QLDS_CONFIG_URL/scripts/quakeexports.sh
+clear
+echo "Settings permissions on scripts"
+chmod 744 /home/$QLDS_USER/*.sh
+clear
 echo "Cronning 'QuakeUpdate.sh'..."
 echo "0 8 * * * /home/$QLDS_USER/quakeupdate.sh" > cron
 crontab cron
 rm cron
-clear
-echo "Creating quakelive directory and copying exports"
-mkdir -p ~/.quakelive/config
-cd ~/.quakelive
-curl -s $QLDS_CONFIG_URL/scripts/quakeexports.sh > quakeexports.sh
 clear
 echo "Done."
 exit

@@ -25,10 +25,10 @@ echo "Starting VQL duel servers..."
 exec $QLDS_X86 \
   +set net_strict 1 \
   +set net_port $gameport \
-  +set sv_hostname "EPOCH VQL Duel #$servernum" \
+  +set sv_hostname "duality | TX | vql duel #$servernum" \
   +set fs_homepath "$QLDS_CONFIG_DIR" \
   +set sv_tags "$QLDS_TAGS" \
-  +set sv_mappoolFile "mappool_vqlduel.txt" \
+  +set sv_mapPoolFile "mappool_vqlduel.txt" \
   +set bot_enable 1 \
   +set bot_nochat 1 \
   +set g_voteFlags "13320" \

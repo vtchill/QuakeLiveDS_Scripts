@@ -20,22 +20,22 @@ tar -xvzf steamcmd_linux.tar.gz
 rm steamcmd_linux.tar.gz
 clear
 echo "Installing Quake Live Dedicated Server..."
-./steamcmd.sh +login anonymous +force_install_dir /home/$QLDS_USER/steamcmd/steamapps/common/qlds/ +app_update 349090 +quit
+./steamcmd.sh +login anonymous +force_install_dir $HOME/steamcmd/steamapps/common/qlds/ +app_update 349090 +quit
 clear
-echo "Downloading qlds server scripts to ~/$QLDS_USER/"
+echo "Downloading qlds server scripts to $HOME"
 cd ~
 curl -s $QLDS_CONFIG_URL/scripts/quakeupdate.sh > quakeupdate.sh
 clear
-echo "Creating ~/$QLDS_USER/.quakelive directory and copying exports"
-mkdir -p ~/.quakelive/config
+echo "Creating $HOME/.quakelive directory and copying exports"
+mkdir -p $HOME/.quakelive/config
 cd ~/.quakelive
 curl -s $QLDS_CONFIG_URL/scripts/quakeexports.sh > quakeexports.sh
 clear
 echo "Settings permissions on scripts"
-chmod 744 /home/$QLDS_USER/*.sh
+chmod 744 $HOME/*.sh
 clear
 echo "Cronning 'QuakeUpdate.sh'..."
-echo "0 8 * * * /home/$QLDS_USER/quakeupdate.sh" > cron
+echo "0 8 * * * $HOME/quakeupdate.sh" > cron
 crontab cron
 rm cron
 clear

@@ -24,12 +24,12 @@ echo "Installing Quake Live Dedicated Server..."
 clear
 echo "Downloading qlds server scripts to ~/$QLDS_USER/"
 cd ~
-wget $QLDS_CONFIG_URL/scripts/quakeupdate.sh
+curl -s $QLDS_CONFIG_URL/scripts/quakeupdate.sh > quakeupdate.sh
 clear
 echo "Creating ~/$QLDS_USER/.quakelive directory and copying exports"
 mkdir -p ~/.quakelive/config
 cd ~/.quakelive
-wget $QLDS_CONFIG_URL/scripts/quakeexports.sh
+curl -s $QLDS_CONFIG_URL/scripts/quakeexports.sh > quakeexports.sh
 clear
 echo "Settings permissions on scripts"
 chmod 744 /home/$QLDS_USER/*.sh

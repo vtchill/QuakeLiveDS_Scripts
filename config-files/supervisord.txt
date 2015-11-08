@@ -20,8 +20,8 @@ supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
 serverurl=unix:///tmp/supervisor.sock ; use a unix:// URL  for a unix socket
 
 [program:quakelive]
-command=/home/qlserver/quakestart.sh %(process_num)s
-user=qlserver
+command=/home/steam/quakestart.sh %(process_num)s
+user=steam
 process_name=qzeroded_%(process_num)s
-numprocs=12
+numprocs=5
 autorestart=true

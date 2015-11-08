@@ -148,5 +148,5 @@ process_name=qzeroded_%(process_num)s
 numprocs=5
 autostart=true
 autorestart=true
-stderr_logfile=/home/.quakelive/log/qlds_%(process_num)s.err.log
-stdout_logfile=/home/.quakelive/log/qlds_%(process_num)s.out.log
+stderr_logfile=/home/steam/.quakelive/log/qlds_%(process_num)s.err.log
+stdout_logfile=/home/steam/.quakelive/log/qlds_%(process_num)s.out.log

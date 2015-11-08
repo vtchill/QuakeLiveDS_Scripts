@@ -47,8 +47,8 @@ while [ $counter -le $serverPortEnd ]
 do
   echo "Updating configuration files in $QLDS_CONFIG_DIR/$counter"
   rm -rf $QLDS_CONFIG_DIR/$counter
-  mkdir -p $QLDS_CONFIG_DIR/$counter
-  cp -R $QLDS_CONFIG_DIR/files/* $QLDS_CONFIG_DIR/$counter
+  mkdir -p $QLDS_CONFIG_DIR/$counter/baseq3
+  cp -R $QLDS_CONFIG_DIR/files/* $QLDS_CONFIG_DIR/$counter/baseq3
   ((counter++))
 done
 

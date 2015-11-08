@@ -1,13 +1,24 @@
-# Duel map pool, provided by phy1um.
+# specify 1 map per line, mapname|factoryid
+# ex: aerowalk|ffa
+# see factories.txt for valid factory id values
 
-bloodrun|duel
 aerowalk|duel
-lostworld|duel
-toxicity|duel
-cure|duel
-sinister|duel
-furiousheights|duel
-houseofdecay|duel
-silence|duel
-hektik|duel
 battleforged|duel
+bloodrun|duel
+bloodrunblue|duel
+campgrounds|duel
+campgroundsblue|duel
+cure|duel
+delirium|duel
+dismemberment|duel
+elder|duel
+furiousheights|duel
+hektik|duel
+houseofdecay|duel
+lostworld|duel
+mcsarges|duel
+phrantic|duel
+silence|duel
+sinister|duel
+toxicity|duel
+verticalvengeance|duel
